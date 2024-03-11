@@ -25,6 +25,25 @@ int main()
     printf("\nAfter deleting the first element of linked list.");
     length = printlinkedlist(head);
     printf("\nlength of linked list is  = %d",length);
+    
+    delete_first_node(&head);
+    printf("\nAfter deleting the first element of linked list.");
+    length = printlinkedlist(head);
+    printf("\nlength of linked list is  = %d",length);
+    delete_first_node(&head);
+    printf("\nAfter deleting the first element of linked list.");
+    length = printlinkedlist(head);
+    printf("\nlength of linked list is  = %d",length);
+    delete_first_node(&head);
+    printf("\nAfter deleting the first element of linked list.");
+    length = printlinkedlist(head);
+    printf("\nlength of linked list is  = %d",length);
+    delete_first_node(&head);
+    printf("\nAfter deleting the first element of linked list.");
+    length = printlinkedlist(head);
+    printf("\nlength of linked list is  = %d",length);
+    
+    
 
 
 }
@@ -32,6 +51,11 @@ int main()
 // for deleting first node
 void delete_first_node(struct node**head1)
 {
+	if(*head1 == NULL)
+	{
+		printf("\nthe linked list is empty.");
+		exit(0);
+	}
     struct node*ptr;
     ptr = *head1;
     *head1 = ptr->link;
@@ -51,7 +75,7 @@ void insert_at_end(struct node**head1,int newdata)		//double is used because if 
 		temp = (struct node*)malloc(sizeof(struct node));			// Creating first new node
 		if(temp==NULL)
 		{
-			printf("Memory is not allocated.");
+			printf("\nMemory is not allocated.");
 			exit(0);
 		}
 		temp->data = newdata;
@@ -64,7 +88,7 @@ void insert_at_end(struct node**head1,int newdata)		//double is used because if 
 	temp = (struct node*)malloc(sizeof(struct node));
 	if(temp == NULL)
 	{
-		printf("Memory is not allocated .");
+		printf("\nMemory is not allocated .");
 		exit(0);
 	}
 	temp->data = newdata;
@@ -88,7 +112,7 @@ int printlinkedlist(struct node*head)
 	int count =0;
 	if(head == NULL)
 	{
-		printf("The linked list is empty.");
+		printf("\nThe linked list is empty.");
 	}
 	struct node *ptr=NULL;
 	ptr  = head;
