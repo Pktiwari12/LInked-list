@@ -46,7 +46,7 @@ int main()
 	current = (struct node*)malloc(sizeof(struct node));			// Second node
 	current->data = 98;
 	current->link = NULL;
-	head->link = current;						// linking node to its previous node (First)
+	head->link = current;						// linking node to its previous node (specific )
 	current = (struct node*)malloc(sizeof(struct node));		// Third node
 	current->data = 3;
 	current->link = NULL;

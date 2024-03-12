@@ -12,12 +12,12 @@ struct node{
 void insert_at_certain(struct node**,int data,int loc);
 int printlinkedlist(struct node*head);
 void insert_at_beg(struct node**head1, int data);
-void insert_at_end(struct node**head1,int newdata)		//double is used because if linked list is empty then we store the address of first node in the head of main function
+void insert_at_end(struct node**head1,int newdata)		//double is used because if linked list is empty then we store the address of specific  node in the head of main function
 {
 	if(*head1 == NULL)						// LIst is empty
 	{
 		struct node*temp;
-		temp = (struct node*)malloc(sizeof(struct node));			// Creating first new node
+		temp = (struct node*)malloc(sizeof(struct node));			// Creating specific  new node
 		if(temp==NULL)
 		{
 			printf("\nMemory is not allocated.");
@@ -50,14 +50,14 @@ void insert_at_end(struct node**head1,int newdata)		//double is used because if 
 int main()
 {
 	struct node* head = NULL;				// This is the plur of the linked list
-//	head = (struct node*)malloc(sizeof(struct node));		// First node
+//	head = (struct node*)malloc(sizeof(struct node));		// specific  node
 //	head->data = 45;
 //	head->link = NULL;
 //	struct node*current = NULL;
 //	current = (struct node*)malloc(sizeof(struct node));			// Second node
 //	current->data = 98;
 //	current->link = NULL;
-//	head->link = current;						// linking node to its previous node (First)
+//	head->link = current;						// linking node to its previous node (specific )
 //	current = (struct node*)malloc(sizeof(struct node));		// Third node
 //	current->data = 3;
 //	current->link = NULL;
@@ -119,10 +119,10 @@ int printlinkedlist(struct node*head)
 
 
 
-void insert_at_certain(struct node**head1,int newdata,int loc)		//double is used because if linked list is empty then we store the address of first node in the head of main function
+void insert_at_certain(struct node**head1,int newdata,int loc)		//double is used because if linked list is empty then we store the address of specific  node in the head of main function
 {
 	int count=0;
-	loc--;
+	loc--;						// Here pay attension we reduce location 1 time
 	struct node*ptr = NULL;			// Create a new node
 	if(ptr = NULL)
 	{
@@ -140,7 +140,7 @@ void insert_at_certain(struct node**head1,int newdata,int loc)		//double is used
 	else{
 	struct node*ptr2 = NULL;					// For travershing means finding the last node in existing linked list
 	ptr2 = *head1;
-	if(count==loc){								// User want to put data in first position 
+	if(count==loc){								// User want to put data in specific  position 
 		ptr->link = *head1;
 		*head1 = ptr;
 	}

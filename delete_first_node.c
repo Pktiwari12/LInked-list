@@ -6,7 +6,7 @@ struct node{
 };
 int printlinkedlist(struct node*);
 void insert_at_end(struct node**,int );
-void delete_first_node(struct node**head1);
+void delete_at_certain(struct node**head1);
 int main()
 {
     struct node*head = NULL;
@@ -17,29 +17,29 @@ int main()
     insert_at_end(&head,4);
     int length = printlinkedlist(head);
     printf("\n length of linked list is  = %d ",length);
-    delete_first_node(&head);
-    printf("\nAfter deleting the first element of linked list.");
+    delete_at_certain(&head);
+    printf("\nAfter deleting the specific  element of linked list.");
     length = printlinkedlist(head);
     printf("\nlength of linked list is  = %d",length);
-    delete_first_node(&head);
-    printf("\nAfter deleting the first element of linked list.");
+    delete_at_certain(&head);
+    printf("\nAfter deleting the specific  element of linked list.");
     length = printlinkedlist(head);
     printf("\nlength of linked list is  = %d",length);
     
-    delete_first_node(&head);
-    printf("\nAfter deleting the first element of linked list.");
+    delete_at_certain(&head);
+    printf("\nAfter deleting the specific  element of linked list.");
     length = printlinkedlist(head);
     printf("\nlength of linked list is  = %d",length);
-    delete_first_node(&head);
-    printf("\nAfter deleting the first element of linked list.");
+    delete_at_certain(&head);
+    printf("\nAfter deleting the specific  element of linked list.");
     length = printlinkedlist(head);
     printf("\nlength of linked list is  = %d",length);
-    delete_first_node(&head);
-    printf("\nAfter deleting the first element of linked list.");
+    delete_at_certain(&head);
+    printf("\nAfter deleting the specific  element of linked list.");
     length = printlinkedlist(head);
     printf("\nlength of linked list is  = %d",length);
-    delete_first_node(&head);
-    printf("\nAfter deleting the first element of linked list.");
+    delete_at_certain(&head);
+    printf("\nAfter deleting the specific  element of linked list.");
     length = printlinkedlist(head);
     printf("\nlength of linked list is  = %d",length);
     
@@ -48,8 +48,8 @@ int main()
 
 }
 
-// for deleting first node
-void delete_first_node(struct node**head1)
+// for deleting specific  node
+void delete_at_certain(struct node**head1)
 {
 	if(*head1 == NULL)
 	{
@@ -67,12 +67,12 @@ void delete_first_node(struct node**head1)
 
 
 // For input data into linked list
-void insert_at_end(struct node**head1,int newdata)		//double is used because if linked list is empty then we store the address of first node in the head of main function
+void insert_at_end(struct node**head1,int newdata)		//double is used because if linked list is empty then we store the address of specific  node in the head of main function
 {
 	if(*head1 == NULL)						// LIst is empty
 	{
 		struct node*temp;
-		temp = (struct node*)malloc(sizeof(struct node));			// Creating first new node
+		temp = (struct node*)malloc(sizeof(struct node));			// Creating specific  new node
 		if(temp==NULL)
 		{
 			printf("\nMemory is not allocated.");
